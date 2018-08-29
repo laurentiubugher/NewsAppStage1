@@ -56,6 +56,10 @@ public class NewAdapter extends ArrayAdapter<New> {
         TextView sectionNameView = (TextView) listItemView.findViewById(R.id.section_name);
         sectionNameView.setText(currentNew.getSectionName());
 
+        // Find the TextView with view ID author
+        TextView authorView = (TextView) listItemView.findViewById(R.id.author);
+        authorView.setText(currentNew.getAuthor());
+
         // Find the TextView with view ID title
         TextView titleView = (TextView) listItemView.findViewById(R.id.title);
         titleView.setText(currentNew.getTitle());

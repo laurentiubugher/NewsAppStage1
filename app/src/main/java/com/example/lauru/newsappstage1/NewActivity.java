@@ -32,7 +32,7 @@ public class NewActivity extends AppCompatActivity implements LoaderManager.Load
     private static final String LOG_TAG = NewActivity.class.getName();
     /** URL for data */
     private static final String REQUEST_URL =
-            "https://content.guardianapis.com/search?q=debates&api-key=test";
+            "http://content.guardianapis.com/search?q=debates&api-key=test&show-tags=contributor";
     /** Adapter for the list of news */
     private NewAdapter mAdapter;
 

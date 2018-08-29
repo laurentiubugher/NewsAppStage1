@@ -146,12 +146,13 @@ public final class QueryUtils {
             // Extract the JSONObject associated with the key called "response",
             JSONObject newObject = baseJsonResponse.getJSONObject("response");
             JSONArray newArray = newObject.getJSONArray("results");
-
             // For each ne in the newArray, create an {@link New} object
             for (int i = 0; i < newArray.length(); i++) {
-
                 // Get a single new at position i within the list of news
                 JSONObject currentNew = newArray.getJSONObject(i);
+                JSONArray arrayNew = currentNew.getJSONArray("tags");
+                JSONObject currentTag = arrayNew.getJSONObject(0);
+                String author = currentTag.getString("webTitle");
 
                 // Extract the value for the key called "sectionName"
                 String sectionName = currentNew.getString("sectionName");
@@ -167,7 +168,7 @@ public final class QueryUtils {
 
                 // Create a new {@link New} object with the magnitude, location, time,
                 // and url from the JSON response.
-                New New = new New(sectionName, webTitle, webPublicationDate, url);
+                New New = new New(sectionName, webTitle, webPublicationDate,author, url);
 
                 // Add the new {@link Earthquake} to the list of earthquakes.
                 news.add(New);

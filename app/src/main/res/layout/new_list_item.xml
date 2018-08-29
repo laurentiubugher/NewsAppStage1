@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="120dp"
-    android:minHeight="120dp"
+    android:minHeight="@dimen/layout_height"
     tools:context=".NewActivity">
 
     <TextView
         android:id="@+id/section_name"
-        android:padding="16dp"
+        android:padding="@dimen/padding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Section Name"
@@ -21,7 +21,7 @@
     <TextView
         android:id="@+id/title"
         android:layout_below="@+id/section_name"
-        android:paddingLeft="16dp"
+        android:paddingLeft="@dimen/padding"
         tools:text="Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -31,9 +31,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Date"
-        android:padding="16dp"
+        android:padding="@dimen/padding"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:paddingEnd="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        tools:text="Author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

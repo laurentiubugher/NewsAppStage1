@@ -3,6 +3,7 @@ package com.example.lauru.newsappstage1;
  * An {@link New} object contains information related to a single new.
  */
 public class New {
+
     /** Section name */
     private String mSectionName;
 
@@ -12,21 +13,24 @@ public class New {
     /** Date of the new */
     private String mDate;
 
+    /** Name of the author */
+    private String mAuthor;
+
     /** Website URL of the new */
     private String mUrl;
 
     /**
      * Constructs a new {@link New} object.
-     *
      * @param SectionName
      * @param Title
      * @param Date
-     * @param url is the website URL to find more details about the new
+     * @param Author
      */
-    public New(String SectionName, String Title, String Date, String url) {
+    public New(String SectionName, String Title, String Date, String Author, String url) {
         mSectionName = SectionName;
         mTitle = Title;
         mDate = Date;
+        mAuthor = Author;
         mUrl = url;
     }
 
@@ -42,6 +46,12 @@ public class New {
      */
     public String getTitle() {
         return mTitle;
+    }
+    /**
+     * Returns the author of the new.
+     */
+    public String getAuthor() {
+        return mAuthor;
     }
 
     /**
